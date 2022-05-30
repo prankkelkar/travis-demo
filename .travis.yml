@@ -1,0 +1,19 @@
+os: linux
+sudo: true
+
+jobs:
+  include:
+    - name: Deploy the operator
+      stage: Deploy the operator
+      language: go
+      os: linux
+      sudo: true
+      go:
+        - "1.18.1"
+        - "1.16.4"
+
+      install:
+        # Install OC client
+        - echo $PATH
+        - echo $GOPATH
+        - echo "Hello world"
